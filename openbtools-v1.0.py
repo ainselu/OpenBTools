@@ -304,7 +304,7 @@ async def fontifyCategoryChannels(ctx, category_id: int, font: str):
 async def cloneRole(ctx, role_id: int):
     role: discord.Role = ctx.guild.get_role(role_id)
     if not role:
-        ctx.message.send("Role not found")
+        await ctx.message.send("Role not found")
         return
     await ctx.guild.create_role(name=role.name, color=role.color, permissions=role.permissions, display_icon=role.display_icon, mentionable=role.mentionable)
     await ctx.message.reply("Done!")
