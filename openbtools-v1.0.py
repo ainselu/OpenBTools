@@ -24,7 +24,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix=PREFIX, help_command=None, intents=intents) 
 version = "v1.0"
 help_message = "" # modified later when the bot starts according to command info
-support = f"OpenBTools {version}. DM @ainselu on Discord for support, and report any issues with the bot to our GitHub at https://github.com/ainselu/OpenBTools"
+supportmsg = f"OpenBTools {version}. DM @ainselu on Discord for support, and report any issues with the bot to our GitHub at https://github.com/ainselu/OpenBTools"
 
 fonts = {
     "double-struck": {
@@ -342,7 +342,7 @@ async def listFonts(ctx):
 
 @bot.command(description=f"Tech support.")
 async def support(ctx):
-    await ctx.message.reply(support)
+    await ctx.message.reply(supportmsg)
     
 print(f"{Fore.LIGHTWHITE_EX}[{Fore.GREEN}INFO{Fore.LIGHTWHITE_EX}] | Getting ready...{Fore.RESET}")
 help_message = f"""```
